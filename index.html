@@ -40,13 +40,19 @@
 
 <link rel="stylesheet" href="/css/main.css" />
 
-    
     <canvas
     id="fireworks"
     style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
 ></canvas>
-    <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
-    <script src=""></script>
+<script src="https://s4.zstatic.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="/js/fireworks.min.js"></script>
+<canvas
+    id="background"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+></canvas>
+<script src="/js/background.min.js"></script>
+    
+
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
 
@@ -205,66 +211,6 @@
 </div>
 
 <div class="post">
-    <a href="2024/04/11/%E5%8D%9A%E5%AE%A2%E5%90%8D/">
-        <h2 class="post-title">博客名</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/4/11
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="2024/04/11/%E5%8D%9A%E5%AE%A2%E5%90%8D/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="2024/04/11/zaiciceshi/">
-        <h2 class="post-title">zaiciceshi</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/4/11
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="2024/04/11/zaiciceshi/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
     <a href="2024/04/11/%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95/">
         <h2 class="post-title">测试测试</h2>
     </a>
@@ -292,98 +238,6 @@
         
     </div>
     <a href="2024/04/11/%E6%B5%8B%E8%AF%95%E6%B5%8B%E8%AF%95/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="2024/04/11/post-title-with-whitespace/">
-        <h2 class="post-title">post title with whitespace</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/4/11
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="2024/04/11/post-title-with-whitespace/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="2024/04/11/ddd/">
-        <h2 class="post-title">ddd</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/4/11
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>我睡觉哦</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="2024/04/11/ddd/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="2024/04/10/gege/">
-        <h2 class="post-title">妃爱</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/4/10
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p><img src="/2024/04/10/gege/feiai.png" alt="(可以写关于图片的描述)"><br><img src="/2024/04/10/gege/feiai.png"></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="2024/04/10/gege/" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
@@ -485,19 +339,44 @@
     <a href="2024/04/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="go-post">阅读全文</a>
 </div>
 
+<div class="post">
+    <a href="2024/04/05/hello-world/">
+        <h2 class="post-title">Hello World</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/4/5
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <img src="/2024/04/05/hello-world/;base64,图片的Base64编码">
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="2024/04/05/hello-world/" class="go-post">阅读全文</a>
+</div>
+
 
         <div class="page-current">
     
     <span class="current">1</span>
     
-    <a class="page-num" href="page/2">2</a>
     
     
-    
-    
-    <a class="page-num" href="page/2/">
-        <i class="fa-solid fa-caret-right fa-fw"></i>
-    </a>
     
 </div>
 
