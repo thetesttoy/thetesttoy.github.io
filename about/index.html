@@ -37,6 +37,10 @@
 
 
 
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
 
 
 
@@ -53,10 +57,10 @@
     style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
 ></canvas>
 <script src="/js/background.min.js"></script>
-    
 
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body>
+   
 
     <div id="layout">
         <transition name="fade">
@@ -97,6 +101,11 @@
         <a href="../tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="../ta">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;T</span>
         </a>
         
     </nav>
@@ -153,6 +162,15 @@
                     </div>
                 </a>
                 
+                <a href="../ta">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">T</div>
+                    </div>
+                </a>
+                
             </div>
         </transition>
     </nav>
@@ -191,6 +209,15 @@
     
     
     
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    <div id="comment">
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+        <div id="waline-container"></div>
+    </div>
     
     
     
@@ -226,7 +253,42 @@
     <script src="../js/main.js"></script>
     
     
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang=""
+    crossorigin
+    async
+></script>
 
+
+
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://comment-khaki-pi.vercel.app/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "enable",
+        
+    });
+</script>
 
 
 
