@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>妃爱 | 妹妹ACG-一个属于妹妹的网站</title>
+    <title>b站自动评论脚本 | 妹妹ACG-一个属于妹妹的网站</title>
     <meta name="author" content="妃爱" />
     <meta name="description" content="无法醒来的梦" />
     <meta name="keywords" content="summer" />
@@ -168,14 +168,14 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>妃爱</h1>
+        <h1>b站自动评论脚本</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/4/20
+            2024/4/28
         </span>
         
         
@@ -187,7 +187,7 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E5%92%8C%E6%B3%89%E5%A6%83%E7%88%B1/" style="color: #00a596">和泉妃爱</a>
+                <a href="../../../../tags/%E8%84%9A%E6%9C%AC/" style="color: #ff7d73">脚本</a>
             </span>
             
         </span>
@@ -195,14 +195,49 @@
     </div>
     
     <div class="content" v-pre>
-        <img src="/2024/04/20/%E5%A6%83%E7%88%B1/妃爱1.png">
+        <p>我们可以搜索指定关键词的视频进行批量评论<br><img src="/2024/04/28/b%E7%AB%99%E8%87%AA%E5%8A%A8%E8%AF%84%E8%AE%BA%E8%84%9A%E6%9C%AC/2.png"></p>
 <span id="more"></span>
-<img src="/2024/04/20/%E5%A6%83%E7%88%B1/妃爱2.png">
-<img src="/2024/04/20/%E5%A6%83%E7%88%B1/妃爱3.png">
-<img src="/2024/04/20/%E5%A6%83%E7%88%B1/妃爱5.jpg">
+<p>需要注意的是，不能直接在控制台元素中直接复制xpath路径，网站显示的是后期渲染上去的，与我们爬取网站的源码是不一样的</p>
+<p>我把爬bv的代码放下面</p>
+<pre class=" language-python"><code class="language-python">etre<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+bvs<span class="token operator">=</span>etre<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'//li[@class="video-item matrix"]/a/@href'</span><span class="token punctuation">)</span>
 
-<p>‘’’<br>print(‘test’)<br>‘’’</p>
 
+</code></pre>
+<p>然后我们需要对得到的bvlist(bv号)在加工处理一下转化为oid</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">for</span> bv <span class="token keyword">in</span> bvs<span class="token punctuation">:</span>
+    i<span class="token operator">+=</span><span class="token number">1</span>
+    bvlist<span class="token operator">=</span>bv<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"?"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token comment" spellcheck="true">#获取aid/oid</span>
+    url<span class="token operator">=</span>f<span class="token string">'https://api.bilibili.com/x/web-interface/view?bvid=&amp;#123;bvlist&amp;#125;'</span>
+    bq<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>cheader<span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    oid<span class="token operator">=</span>bq<span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'aid'</span><span class="token punctuation">]</span>
+    <span class="token keyword">yield</span> oid
+
+</code></pre>
+<p>获取到oid后找到评论api，我就懒得上图了，把源码附上了</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">for</span> t <span class="token keyword">in</span> oid<span class="token punctuation">:</span>
+    curl <span class="token operator">=</span> <span class="token string">"https://api.bilibili.com/x/v2/reply/add"</span>
+    params <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token string">"csrf"</span><span class="token punctuation">:</span> <span class="token string">"9986160u3t9f9d740246bca4fb"</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    data<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token string">"oid"</span><span class="token punctuation">:</span> t<span class="token punctuation">,</span>
+            <span class="token string">"type"</span><span class="token punctuation">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span>
+            <span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"有茉子，我来辣Ciallo～(∠・ω&lt; )⌒☆"</span><span class="token punctuation">,</span>
+            <span class="token string">"plat"</span><span class="token punctuation">:</span> <span class="token string">"1"</span><span class="token punctuation">,</span>
+            <span class="token string">"at_name_to_mid"</span><span class="token punctuation">:</span> <span class="token string">"&amp;#123;&amp;#125;"</span><span class="token punctuation">,</span>
+            <span class="token string">"pictures"</span><span class="token punctuation">:</span> <span class="token string">"[]"</span><span class="token punctuation">,</span>
+            <span class="token string">"has_vote_option"</span><span class="token punctuation">:</span> <span class="token string">"true"</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span>curl<span class="token punctuation">,</span> headers<span class="token operator">=</span>cheader<span class="token punctuation">,</span> cookies<span class="token operator">=</span>cookies<span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">,</span> data<span class="token operator">=</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+</code></pre>
+<p>到这里基本上就大功告成啦，不过需要注意的是阿b的cookie和csrf有效期似乎只有一个小时左右  <s>其实我也不太清楚</s>，过期了就得重新换</p>
+<p style="color: skyblue;font-size: large">注意此教程实现的只是基本功能，还有需要功能需要进一步的完善，评论的时间需要控制，评论的内容可以进行随机替换，自动获取csrf...</p><p>
+
+
+</p>
     </div>
     
     
