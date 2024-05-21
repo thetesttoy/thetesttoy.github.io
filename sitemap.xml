@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mmacgn.top/about/index.html</loc>
+    
+    <lastmod>2024-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mmacgn.top/2024/05/10/%E7%BE%8E%E5%9B%BE-1/</loc>
     
     <lastmod>2024-05-21</lastmod>
@@ -75,15 +84,6 @@
   
   <url>
     <loc>https://mmacgn.top/2024/04/29/p%E7%AB%99%E7%88%AC%E8%99%AB%E8%84%9A%E6%9C%AC/</loc>
-    
-    <lastmod>2024-05-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mmacgn.top/about/index.html</loc>
     
     <lastmod>2024-05-10</lastmod>
     
