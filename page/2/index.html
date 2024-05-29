@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Tags: 泉奈 | 妹妹ACG-一个属于妹妹的网站</title>
+    <title>妹妹ACG-一个属于妹妹的网站</title>
     <meta name="author" content="妃爱" />
     <meta name="description" content="无法醒来的梦" />
     <meta name="keywords" content="妹妹acg" />
@@ -35,6 +35,8 @@
 
 
 
+
+<script src="../../js/lib/home.js"></script>
 
 <link rel="stylesheet" href="../../css/main.css" />
 
@@ -160,104 +162,136 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="../../images/118198298_p0.jpg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>妹妹ACG-一个属于妹妹的网站</h1>
+                <h3></h3>
+                <h5>无法醒来的梦</h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
         
+
+<div class="post">
+    <a href="../../2024/04/23/%E6%B3%89%E5%A5%88/">
+        <h2 class="post-title">泉奈</h2>
+    </a>
+    <div class="category-and-date">
         
-        
-        <span>
-            <a href="../%E8%84%9A%E6%9C%AC/" style="background: #00bcd4">
+        <span class="category">
+            <a href="../../categories/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88/">
                 <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                脚本
+                碧蓝档案
             </a>
         </span>
         
-        
-        
-        <span>
-            <a href="../%E5%92%8C%E6%B3%89%E5%A6%83%E7%88%B1/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                和泉妃爱
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="../%E6%99%BA%E4%B8%96%E5%AD%90/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                智世子
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                泉奈
-            </a>
-        </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="../%E5%B0%91%E5%84%BF%E9%A2%91%E9%81%93/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                少儿频道
-            </a>
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/4/23
         </span>
         
         
     </div>
-    
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/4/23</div>
-            <a href="../../2024/04/23/%E6%B3%89%E5%A5%88/">
-                <h3>泉奈</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="../../categories/%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        碧蓝档案
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="" style="color: #ffa2c4">泉奈</a>
-                    </span>
-                    
-                </span>
-                
-            </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <img src="/2024/04/23/%E6%B3%89%E5%A5%88/117887008_p3.png">
+            
         </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="../../tags/%E6%B3%89%E5%A5%88/" style="color: #00bcd4">泉奈</a>
+        </span>
+        
+    </div>
+    <a href="../../2024/04/23/%E6%B3%89%E5%A5%88/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="../../">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="../../images/datian.jpg" alt="avatar" />
+        </div>
+        <div class="name">妃爱</div>
+        <div class="description">
+            <p>我永远喜欢和泉妃爱～(∠・ω＜)⌒☆</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/thetesttoy">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://qm.qq.com/q/Xb3Kgn1QGs">
+                    <i
+                        class="fa-brands fa-qq fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://thetesttoy.github.io">Argvchs</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
     </div>
     
 </div>
