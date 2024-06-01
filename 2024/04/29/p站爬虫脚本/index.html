@@ -189,7 +189,7 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E8%84%9A%E6%9C%AC/" style="color: #00a596">脚本</a>
+                <a href="../../../../tags/%E8%84%9A%E6%9C%AC/" style="color: #00bcd4">脚本</a>
             </span>
             
         </span>
@@ -248,9 +248,6 @@ cookies <span class="token operator">=</span> <span class="token operator">&amp;
         <span class="token string">"lang"</span><span class="token punctuation">:</span> <span class="token string">"zh"</span><span class="token punctuation">,</span>
         <span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"6c33903e9ee09f649515b0326775bf9913d930a1"</span>
     <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    headers<span class="token operator">=</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-         <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
     response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">,</span>params<span class="token operator">=</span>params<span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
     picId<span class="token operator">=</span>response<span class="token punctuation">[</span><span class="token string">'body'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'illustManga'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'data'</span><span class="token punctuation">]</span>
     all_ids<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
@@ -258,12 +255,6 @@ cookies <span class="token operator">=</span> <span class="token operator">&amp;
         illust_id <span class="token operator">=</span> item<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>  
         all_ids<span class="token punctuation">.</span>append<span class="token punctuation">(</span>illust_id<span class="token punctuation">)</span>
     <span class="token keyword">for</span> id <span class="token keyword">in</span> all_ids<span class="token punctuation">:</span>  
-        headers <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-      <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-        cookies <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-   <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
         url <span class="token operator">=</span> f<span class="token string">'https://www.pixiv.net/ajax/illust/&amp;#123;id&amp;#125;/pages?lang=zh&amp;version=6c33903e9ee09f649515b0326775bf9913d930a1'</span>
         response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span><span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
         original_values <span class="token operator">=</span> <span class="token punctuation">[</span>item<span class="token punctuation">[</span><span class="token string">'urls'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'original'</span><span class="token punctuation">]</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> response<span class="token punctuation">[</span><span class="token string">'body'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
