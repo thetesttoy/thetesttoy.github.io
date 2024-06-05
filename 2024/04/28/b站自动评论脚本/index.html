@@ -189,7 +189,7 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E8%84%9A%E6%9C%AC/" style="color: #00bcd4">脚本</a>
+                <a href="../../../../tags/%E8%84%9A%E6%9C%AC/" style="color: #ffa2c4">脚本</a>
             </span>
             
         </span>
@@ -197,10 +197,12 @@
     </div>
     
     <div class="content" v-pre>
-        <p>我们可以搜索指定关键词的视频进行批量评论<br><img src="/2024/04/28/b%E7%AB%99%E8%87%AA%E5%8A%A8%E8%AF%84%E8%AE%BA%E8%84%9A%E6%9C%AC/2.png"></p>
+        <p>我们可以搜索指定关键词的视频进行批量评论<br>需要注意的是，不能直接在控制台元素中直接复制xpath路径，网站显示的是后期渲染上去的，与我们爬取网站的源码是不一样的</p>
 <span id="more"></span>
-<p>需要注意的是，不能直接在控制台元素中直接复制xpath路径，网站显示的是后期渲染上去的，与我们爬取网站的源码是不一样的</p>
-<p>我把爬bv的代码放下面</p>
+
+<img src="/2024/04/28/b%E7%AB%99%E8%87%AA%E5%8A%A8%E8%AF%84%E8%AE%BA%E8%84%9A%E6%9C%AC/2.png">
+我把爬bv的代码放下面
+
 <pre class=" language-python"><code class="language-python">etre<span class="token operator">=</span>etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
 bvs<span class="token operator">=</span>etre<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'//li[@class="video-item matrix"]/a/@href'</span><span class="token punctuation">)</span>
 
