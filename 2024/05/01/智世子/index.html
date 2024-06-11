@@ -205,7 +205,7 @@
             
             <span class="tag">
                 
-                <a href="../../../../tags/%E6%99%BA%E4%B8%96%E5%AD%90/" style="color: #03a9f4">智世子</a>
+                <a href="../../../../tags/%E6%99%BA%E4%B8%96%E5%AD%90/" style="color: #00bcd4">智世子</a>
             </span>
             
         </span>
@@ -214,18 +214,46 @@
     
     
     <div class="content" v-pre>
-        <p>师生恋太棒啦，还是萝莉耶( •̀ ω •́ )，不过话说怎么有股夜羊味(bushi）？？？</p>
-<p>总的来说剧情还算不错，就是有点短…</p>
-<span id="more"></span>
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750339.png">
-
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750338.png">
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750337.png">
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750336.png">
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750335.png">
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750333.png">
-
-<img src="https://imageyiyi.oss-cn-hongkong.aliyuncs.com/202405251750339.png">
+        <script src=/js/crypto-js.js></script>
+<script>
+function doDecrypt (pwd, onError) {
+	console.log('in doDecrypt');
+	const txt = document.getElementById('enc_content').innerHTML;
+	let plantext;
+	try {
+		const bytes = CryptoJS.AES.decrypt(txt, pwd);
+		var plaintext = bytes.toString(CryptoJS.enc.Utf8);
+	} catch(err) {
+		if(onError) {
+			onError(err);
+		}
+		return;
+	}
+	document.getElementById('enc_content').innerHTML = plaintext;
+	document.getElementById('enc_content').style.display = 'block';
+	document.getElementById('enc_passwd').style.display = 'none';
+	if(typeof MathJax !== 'undefined') {
+		MathJax.Hub.Queue(
+			['resetEquationNumbers', MathJax.InputJax.TeX],
+			['PreProcess', MathJax.Hub],
+			['Reprocess', MathJax.Hub]
+		);
+	}
+}
+</script>
+<div id="enc_content" style="display:none">U2FsdGVkX1+uAPcWuVdJ2jr8rSV6eCkBTdpMmQFv+vjbXiyYY19Dic1HyxNkF3foswgjI4MSgaAHDC8sgHo9jf8UkEh+D2/6wJN6TMx9ADEOuVgO6n4aEM1k4JwpMz3hdwYd1jo4Cc5RM+i+VU7Z4Y07dJGe1SoKzVcyV7E8/8Uqdks0Wujoo7BZaI+MKCUlCzN7Ra8w60kgWr9rfJKM6ExAc+Q1y3p3yTU/A/OGNf5+z4+bE+m2pptgymY2NiXH4ChYzc488ZpwzGdkvjMNbH3daDLV5j0MyMwIOwxttA7PIEEpjpXkTKDE7Y70nz6zoa4F3y4sr58G4eXFe7l/1rijhIA0lN/UscTV/OG7U/NfyFumvxADdC2U5VtAL5GyREFmr0BnER4G+RszMq7PwO87XTJ7ofTeXxM1jFsqv3QansCfoYYc9+nhPkWsK/SP0k3T1RO/LiB38l93EOQd6r7ftWb+ycMtYLEWT2AeIk8j7nmNSAHSnJIhxVIxjq43A/rdReyGMW1zNUYBAsp4Zb5A+4Bc92Hj4Wt1Pz5z65OBH+JXZJpLMUG2nd8jA9jgPSIHKxBxtyET6+a3WcYlDHFUyecN7CXOO5Hk/efhklrbCFwKBdq6YuyJt8IzUJIgTzFk7QE3F/qVmysR4x09PLuuJwkhdN729LPZA6uPJMN69WFcszGyIrpefnVMmM6xK/hB7Dj5o3JqwW0ubdOc9t+2F3rk1shg55BBumj9N1Pp4fpK51Djmgpf9C8wPGj+zgAdeGUvB2VDa5FPMv7JWxuK/3wTMHSXJGX1+5sKYFPCuIq79DteGmxt2jezo7Lgz59KFhvo2LDOV8UN2fn3gAoyTurkYT/WI8oP+3N/rkgmgTjbSV7ZzIKEOquFRGB82KUTk0B739UqTuL6WSos1eFXplY3oDm+a6i1Q/mrG+x0QU9teykvOfpQJNDsJEU6wLGGttnlQ6wzXqZGhM3bpl83s1cuUSJGFDLrNqu5QH70xDI/HOTUaSXXF7YdMw94cQL/auOTS7IpS9xJEOmIbQ==</div>
+<div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
+<script>
+var onError = function(error) {
+	document.getElementById("enc_error").innerHTML = "password error!"
+};
+function decrypt() {
+var passwd = document.getElementById("enc_pwd_input").value;
+console.log(passwd);
+doDecrypt(passwd, onError);
+}
+</script>
+</div>
     </div>
     
     
