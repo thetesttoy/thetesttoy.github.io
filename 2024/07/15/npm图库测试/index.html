@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>tags | 妹妹ACG-一个属于妹妹的网站</title>
+    <title>npm图库测试 | 妹妹ACG-一个属于妹妹的网站</title>
     <meta name="author" content="妃爱" />
     <meta name="description" content="无法醒来的梦" />
     <meta name="keywords" content="妹妹acg" />
@@ -29,17 +29,25 @@
     rel="stylesheet"
     href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
 />
-<script src="../js/lib/highlight.js"></script>
+<script src="../../../../js/lib/highlight.js"></script>
 
 
 
-<script src="../js/lib/preview.js"></script>
+<script src="../../../../js/lib/preview.js"></script>
 
 
 
 
 
-<link rel="stylesheet" href="../css/main.css" />
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
+
+
+
+<link rel="stylesheet" href="../../../../css/main.css" />
 
     <canvas
     id="fireworks"
@@ -78,27 +86,27 @@
             <span>妹妹ACG-一个属于妹妹的网站</span>
         </a>
         
-        <a href="../index.html">
+        <a href="../../../../index.html">
             <i class="fa-solid fa-house fa-fw"></i>
             <span>&ensp;Home</span>
         </a>
         
-        <a href="../about">
+        <a href="../../../../about">
             <i class="fa-solid fa-id-card fa-fw"></i>
             <span>&ensp;About</span>
         </a>
         
-        <a href="../archives">
+        <a href="../../../../archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;Archives</span>
         </a>
         
-        <a href="../categories">
+        <a href="../../../../categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
             <span>&ensp;Categories</span>
         </a>
         
-        <a href="../tags">
+        <a href="../../../../tags">
             <i class="fa-solid fa-tags fa-fw"></i>
             <span>&ensp;Tags</span>
         </a>
@@ -112,7 +120,7 @@
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
                 
-                <a href="../index.html">
+                <a href="../../../../index.html">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
@@ -121,7 +129,7 @@
                     </div>
                 </a>
                 
-                <a href="../about">
+                <a href="../../../../about">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
@@ -130,7 +138,7 @@
                     </div>
                 </a>
                 
-                <a href="../archives">
+                <a href="../../../../archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
@@ -139,7 +147,7 @@
                     </div>
                 </a>
                 
-                <a href="../categories">
+                <a href="../../../../categories">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
@@ -148,7 +156,7 @@
                     </div>
                 </a>
                 
-                <a href="../tags">
+                <a href="../../../../tags">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
@@ -166,78 +174,41 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        
-        <span>
-            <a href="%E8%84%9A%E6%9C%AC/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                脚本
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="%E5%92%8C%E6%B3%89%E5%A6%83%E7%88%B1/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                和泉妃爱
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="%E5%B0%91%E5%84%BF%E9%A2%91%E9%81%93/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                少儿频道
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="%E6%99%BA%E4%B8%96%E5%AD%90/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                智世子
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="%E6%B3%89%E5%A5%88/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                泉奈
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="%E6%97%A5%E5%B8%B8/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                日常
-            </a>
+            
+<div class="article">
+    <div>
+        <h1>npm图库测试</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/7/15
         </span>
         
         
     </div>
+    
+    
+    <div class="content" v-pre>
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://unpkg.com/qiyuqiqi@1.0.0/pic/107167862_p0.jpg">
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    <div id="comment">
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+        <div id="waline-container"></div>
+    </div>
+    
+    
     
 </div>
 
@@ -275,7 +246,48 @@
         </transition>
         
     </div>
-    <script src="../js/main.js"></script>
+    <script src="../../../../js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo=""
+    data-repo-id=""
+    data-category=""
+    data-category-id=""
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang=""
+    crossorigin
+    async
+></script>
+
+
+
+<script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://comment-khaki-pi.vercel.app/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "nick".split(","),
+        lang: "",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "enable",
+        
+    });
+</script>
+
+
+
     
 
         <style>
