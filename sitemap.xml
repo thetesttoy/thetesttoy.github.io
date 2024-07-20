@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mmacgn.top/about/index.html</loc>
+    
+    <lastmod>2024-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mmacgn.top/about/ceshi1.html</loc>
+    
+    <lastmod>2024-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mmacgn.top/link/index.html</loc>
     
     <lastmod>2024-07-20</lastmod>
@@ -230,15 +248,6 @@
     <loc>https://mmacgn.top/manifest.json</loc>
     
     <lastmod>2024-07-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mmacgn.top/about/index.html</loc>
-    
-    <lastmod>2024-06-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
