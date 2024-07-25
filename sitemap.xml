@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://loliacg.top/2024/07/25/%E5%9F%9F%E5%90%8D%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://loliacg.top/about/index.html</loc>
+    
+    <lastmod>2024-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://loliacg.top/2024/07/25/%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2024-07-25</lastmod>
     
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://loliacg.top/about/ceshi1.html</loc>
-    
-    <lastmod>2024-07-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://loliacg.top/about/index.html</loc>
     
     <lastmod>2024-07-25</lastmod>
     
