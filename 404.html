@@ -59,7 +59,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: false,
-  postUpdate: '2024-08-21 18:33:20',
+  postUpdate: '2024-08-21 18:49:11',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -343,7 +343,7 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('https://comment-khaki-pi.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const res = await fetch('https://comment.loliacg.top/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {
