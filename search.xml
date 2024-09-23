@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>测试</title>
+      <link href="/2024/09/23/%E6%B5%8B%E8%AF%95-1/"/>
+      <url>/2024/09/23/%E6%B5%8B%E8%AF%95-1/</url>
+      
+        <content type="html"><![CDATA[<script src="/js/crypto-js.js"></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX19nlh/+T3xgrqmV0wQNcyfZa7g2nBLhbSBIYxUkLqK4cEiWvtrf05IrRWhLq39HAqqhuX9YfsMDCS5CYsRfI9ZzcSb84ouiBgqCc84DBdmMv/TvhRkZSuIi+A5d4mZEcu6vBUEybdb68DiKWSDi5ItU/rVm/34J0wpPkXlxlDEEqc+vvwG+90gVou2soVAx485JkfPViJSBeBCXbZhFl4aMnCnHZ6fWt67kSTO0oS4Aq30l8DvRh+2KRHD3bnIDTXofUeEbzwAGiUQgPioVv7Cqw0TDyf9LIU9NC+Uz0iQZCruUvsLFBqQruZ95McB6UklRp3TWr8LG7GPlxUDO6ath6vi1xmvefjJAwwe9Nz2FY+9j8wSyK0qeKSXs9fet2kV2JfJyZWuTh4CSh5teO4JWhNpDlF+eU4JM/t27kT/uLH1dnCTGf30Ho4np9Cf1x/61Gu9jKLA1G8YdN2HXKUWea/1QVRuMHeOvEDcVDuttFKxUGS9RtEPsGSnzh8IJCi76pzn0TMidoLtthAQ89fGmLMVo2+9zogbSvEl1SHWNJ4/LgDMN8Nh7ZUzF3eDwTq/ANnc5DwP6JH0hSvQ8W2tZRwd9Kvag3lFwhroqyik/XXAmM5UVkI0QemXARAsJqsT3zAtfJ7tXIPKCEBOEY0mVQ9v62K0E2wwACcqS02g0gmcM6fR7FtcaPYPiP/0D6PcQ0kiZi1tOYm2LplS0zcpEmH6aSFp8geGAkeX1cgT6E8eWSHvZeHtci83VLNT61RZjN6PeQrzFBs0HUUKZqaob9iTbdj7bTzPLI8TT3e4TYXmLrV8xGi4fy+YS+w94D0r+sjqdpmD+DHhZRf2Y3XNJN1xET7dHsxVUkxM7O4nJEC0JWHkSaa2JfPJ3oNsbDPwn/aQ/0XkDDsj9Xxz1+OhEby9BStIPs7wraYquDGWt7fkm9m++4oiU0YMKosXJr0uhgqhw+FnCo5WQMma1OJNgYKENiJ6Moins5dxJqY4OF7o8DRMFkAVB+2XdtGtiLaIHz0m97+57obmzsS6gOKQSqx2eHDhY3iYYOQIfsBmYcg53d11sjt/VTowo/jKBFEmIEwsyUS86jsNoDQoFisZqjYGa28zQ7PxJqpsFAjWRK1wlbpTfgmID21maafUeAHmfNu9PBbhpjmYukJ/vI8TNJSLFW/KHJfaPr8DS0iJ9XddQHE+EyG7FalZrFFUkUtZ5K8sPgcA0QaCaJx2dvxoD3wtmou6pV+/2e2MFGhA1YxKxwXnLju63s4FnzuPucpwjzr5SOspLtRstngV4xOH/GLugTb/2rgAgz+ldS90HiZrHjHxDBFXf4ian5j4VSSU4c9uslho25XRcmsWwMoD2JXr4JVbzf6KULHL/CdqtYlTsrLew5+mMdtgrYZ/JJ5kMNF+VWDSIdQO6cUDwv2LSgck3zWxoDIwoQg0kxugK+AZk08cipFf7KGmy4c+KKhJWZ3c/fljqou2ZyR7x+K0l0oYwSI7aPI208+C3XmLao0DDWu0BV3iRwGEyDtShvNuf5Vw4Z08I0OV4giGxLceIKR785boSdDlIgiaXqDFXqvOhjZ+3eoJgDW8CE4FhaZBKqA7v1YIEezekCKIWZvL8qOyk6GY0dhe/htQodGuzOmye+HvIlh69wYu5iBGhDZQHqyN3ZrstQQ==</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 瑟瑟 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>崩崩崩最良心的一集</title>
       <link href="/2024/09/23/%E5%B4%A9%E5%B4%A9%E5%B4%A9%E6%9C%80%E8%89%AF%E5%BF%83%E7%9A%84%E4%B8%80%E9%9B%86/"/>
       <url>/2024/09/23/%E5%B4%A9%E5%B4%A9%E5%B4%A9%E6%9C%80%E8%89%AF%E5%BF%83%E7%9A%84%E4%B8%80%E9%9B%86/</url>
