@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>BA篇</title>
+      <link href="/2024/10/02/BA%E7%AF%87/"/>
+      <url>/2024/10/02/BA%E7%AF%87/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://www.helloimg.com/i/2024/10/02/66fc3580a5854.jpg" alt="116466523_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580a6d00.jpg" alt="115642402_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580c0698.jpg" alt="110523297_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580bb8a4.jpg" alt="119845076_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580bf4c8.jpg" alt="115520506_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3581222f8.jpg" alt="111320342_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580d9f0a.jpg" alt="116016986_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580d9510.jpg" alt="122701114_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3580d63a6.jpg" alt="118273396_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc358151e39.jpg" alt="119546489_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc358353d87.jpg" alt="109455560_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc358384f02.jpg" alt="107149837_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3583d6d9d.jpg" alt="102223567_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc3583f183c.jpg" alt="105853779_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc35842063d.jpg" alt="106981371_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc35841f3e3.jpg" alt="105524907_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc358438cf0.jpg" alt="106355162_p0.jpg"><br><img src="https://www.helloimg.com/i/2024/10/02/66fc35843cb75.jpg" alt="101638807_p0.jpg"></p><div class="link-container">    <a href="https://www.pixiv.net/users/77423935/artworks">传送门</a></div><style>    .link-container {        text-align: center; /* 将容器中的内容水平居中 */        margin: 20px; /* 为了更好地展示 */    }</style>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美图 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二次元壁纸 </tag>
+            
+            <tag> 萝莉 </tag>
+            
+            <tag> 玉足 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>p站作者爬取</title>
+      <link href="/2024/10/02/p%E7%AB%99%E4%BD%9C%E8%80%85%E7%88%AC%E5%8F%96/"/>
+      <url>/2024/10/02/p%E7%AB%99%E4%BD%9C%E8%80%85%E7%88%AC%E5%8F%96/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process, Queue</span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> parse</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> progress.bar <span class="keyword">import</span> Bar</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> RequestException</span><br><span class="line"><span class="keyword">from</span> concurrent.futures <span class="keyword">import</span> ThreadPoolExecutor</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"><span class="keyword">import</span> queue</span><br><span class="line">headers = &#123;</span><br><span class="line">    &#125; </span><br><span class="line">cookies = &#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line">pid=<span class="number">77423935</span>   <span class="comment">#指定作者主页id</span></span><br><span class="line">url = <span class="string">f&quot;https://www.pixiv.net/ajax/user/<span class="subst">&#123;pid&#125;</span>/profile/all&quot;</span>   <span class="comment">#指定作者解析</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">create_directory</span>(<span class="params">path</span>):</span><br><span class="line">    os.makedirs(path, exist_ok=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">geturl</span>(<span class="params">q</span>):</span><br><span class="line">    params = &#123;</span><br><span class="line">        <span class="string">&quot;lang&quot;</span>: <span class="string">&quot;zh&quot;</span>,</span><br><span class="line">        <span class="string">&quot;version&quot;</span>: <span class="string">&quot;ffd686701f8dee21374fbbf9873ec37bbef4be58&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url, headers=headers, cookies=cookies, params=params).json()</span><br><span class="line">    works=response[<span class="string">&#x27;body&#x27;</span>][<span class="string">&#x27;illusts&#x27;</span>]</span><br><span class="line">    ids_string = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> works:</span><br><span class="line">        ids_string.append(i) </span><br><span class="line">    n=<span class="number">0</span> </span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> ids_string:</span><br><span class="line">        n+=<span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n&#125;</span>   <span class="subst">&#123;<span class="built_in">id</span>&#125;</span>&#x27;</span>)</span><br><span class="line">        urls = <span class="string">f&#x27;https://www.pixiv.net/ajax/illust/<span class="subst">&#123;<span class="built_in">id</span>&#125;</span>/pages?lang=zh&amp;version=6c33903e9ee09f649515b0326775bf9913d930a1&#x27;</span></span><br><span class="line">        <span class="comment"># print(url)</span></span><br><span class="line">        response = requests.get(urls, headers=headers,cookies=cookies).json()</span><br><span class="line">        <span class="comment"># print(response)</span></span><br><span class="line">        original_values = [item[<span class="string">&#x27;urls&#x27;</span>][<span class="string">&#x27;original&#x27;</span>] <span class="keyword">for</span> item <span class="keyword">in</span> response[<span class="string">&#x27;body&#x27;</span>]]</span><br><span class="line">        <span class="comment"># print(original_values)</span></span><br><span class="line">        <span class="keyword">for</span> oriurl <span class="keyword">in</span> original_values:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;正在把<span class="subst">&#123;oriurl&#125;</span>塞入队列喵&#x27;</span>)</span><br><span class="line">            q.put(oriurl)</span><br><span class="line">    q.put(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">downurl</span>(<span class="params">url</span>):</span><br><span class="line">        response = requests.get(url, stream=<span class="literal">True</span>,headers=headers,cookies=cookies)</span><br><span class="line">        response.raise_for_status()</span><br><span class="line">        total_size = <span class="built_in">int</span>(response.headers.get(<span class="string">&#x27;content-length&#x27;</span>, <span class="number">0</span>))</span><br><span class="line">        filename = url.split(<span class="string">&#x27;/&#x27;</span>)[-<span class="number">1</span>]</span><br><span class="line">        save_path = <span class="string">f&#x27;E:\\p站图片\\p站<span class="subst">&#123;pid&#125;</span>&#x27;</span>          <span class="comment">#修改选项</span></span><br><span class="line">        save_file = os.path.join(save_path, filename)</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(save_file, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">            <span class="keyword">with</span> tqdm(total=total_size, unit=<span class="string">&#x27;B&#x27;</span>, unit_scale=<span class="literal">True</span>) <span class="keyword">as</span> progress_bar:</span><br><span class="line">                <span class="keyword">for</span> chunk <span class="keyword">in</span> response.iter_content(chunk_size=<span class="number">1024</span>):</span><br><span class="line">                    <span class="keyword">if</span> chunk:</span><br><span class="line">                        file.write(chunk)</span><br><span class="line">                        progress_bar.update(<span class="built_in">len</span>(chunk))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;filename&#125;</span>下载完成喵&#x27;</span>)</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">load_url</span>(<span class="params">q</span>):</span><br><span class="line">    <span class="keyword">with</span> ThreadPoolExecutor(max_workers=<span class="number">40</span>) <span class="keyword">as</span> executor:</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            url = q.get()</span><br><span class="line">            <span class="keyword">if</span> url == <span class="string">&#x27;ok&#x27;</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            executor.submit(downurl, url,)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    </span><br><span class="line">    create_directory(<span class="string">f&#x27;E:\\p站图片\\p站<span class="subst">&#123;pid&#125;</span>&#x27;</span>)      <span class="comment">#修改选项</span></span><br><span class="line">    q = Queue()</span><br><span class="line">    q1 = Process(target=geturl, args=(q,))</span><br><span class="line">    q2 = Process(target=load_url, args=(q,))</span><br><span class="line">    q1.start()</span><br><span class="line">    q2.start()</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 脚本 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 脚本 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>10/1美图</title>
       <link href="/2024/10/01/10-1%E7%BE%8E%E5%9B%BE/"/>
       <url>/2024/10/01/10-1%E7%BE%8E%E5%9B%BE/</url>
