@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://loliacg.top/2024/11/11/11-11%E7%91%9F%E5%9B%BE/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://loliacg.top/2024/11/10/%E9%9A%8F%E6%9C%BA%E7%91%9F%E5%9B%BE%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2024-11-11</lastmod>
@@ -1184,6 +1193,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://loliacg.top/tags/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%91%9F%E5%9B%BE/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -1216,6 +1232,13 @@
   
   <url>
     <loc>https://loliacg.top/categories/%E9%A3%8E%E6%99%AF/</loc>
+    <lastmod>2024-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://loliacg.top/categories/%E7%91%9F%E5%9B%BE/</loc>
     <lastmod>2024-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
