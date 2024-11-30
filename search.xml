@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>日常.....</title>
+      <link href="/2024/11/30/%E6%97%A5%E5%B8%B8/"/>
+      <url>/2024/11/30/%E6%97%A5%E5%B8%B8/</url>
+      
+        <content type="html"><![CDATA[<script src="/js/crypto-js.js"></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX18s1XzIXieI3kcans42LgHAJBrKGL38RMd+/26WE8c8ezM+yug09dqrqLqFnvUqEBxuZPS8TP6cF4dASnaiAJKF18HweYNmFVzY4cuYvmTaOSzAuSc0hABbCgeKgCDU9W0wdbpiGQ59Vycrqd9YWoW2oeEjUhlZbYv8PBkUe2UFzf4ZGPbuuK7pjhM7kD8ThfRdurjOv9BS+xx6hEx6AAHb02Unw5BIEg3fzRqGXuQADJk8Pr9phUIJ82dZXiaaBBNrGXiccqqqA2tnR5EUfA159nk5wZO2YsDPFydIjVscyDzoxg7gBPvZ</div><div id="enc_passwd"> <input id="enc_pwd_input" type="password" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div><script>var onError = function(error) {document.getElementById("enc_error").innerHTML = "password error!"};function decrypt() {var passwd = document.getElementById("enc_pwd_input").value;console.log(passwd);doDecrypt(passwd, onError);}</script></div>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 日常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>11/27美图</title>
       <link href="/2024/11/27/11-27%E7%BE%8E%E5%9B%BE/"/>
       <url>/2024/11/27/11-27%E7%BE%8E%E5%9B%BE/</url>
